@@ -107,9 +107,5 @@ run_analysis <- function(directory = getwd()) {
         merged_data <- merged_data[, !(names(merged_data) %in% "V2")]
     }
     
-    agg_data <- aggregate(merged_data[, 3:68], by = list(merged_data$Subject, merged_data$Activity), FUN = mean)
-    names(agg_data)[names(agg_data) == "Group.1"] <- "Subject"
-    names(agg_data)[names(agg_data) == "Group.2"] <- "Activity"
-    
     merged_data
 }
