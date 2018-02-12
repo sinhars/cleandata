@@ -1,4 +1,4 @@
-run_analysis <- function(directory) {
+run_analysis <- function(directory = getwd()) {
     
     merged_data <- data.frame()
     
